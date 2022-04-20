@@ -36,7 +36,7 @@ def main():
     Container.print_report(case_data)
     fail_msg = Container._fail_msg
     # Container.print_check()
-    fbSend(''.join(fail_msg),'http://10.96.140.23:8080/job/configCheck')
+    fbSend(''.join(fail_msg),'http://10.96.140.23:8080/job/configCheck') # 这个链接是Jenkins的任务地址，需要改成自己的
     print("cost:", time.time() - start)
 
 def check_self():

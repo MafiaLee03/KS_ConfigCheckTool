@@ -25,7 +25,7 @@ def flyBook(message):
     requests.request("POST", url, headers=headers, data=json.dumps(payload_message))
 
 def fbSend(j,jenkins_url = None):
-    url = 'https://open.feishu.cn/open-apis/bot/v2/hook/68c79855-f43e-4584-b64a-3b79c62de9f8'
+    url = 'https://open.feishu.cn/open-apis/bot/v2/hook/68c79855-f43e-4584-b64a-3b79c62de9f8' # 这个是测试用的通知群，需要改成自己创建的
     if j == '':
         return
     payload_message = {
