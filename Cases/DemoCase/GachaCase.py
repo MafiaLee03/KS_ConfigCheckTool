@@ -2,12 +2,11 @@
 from Core.BaseCase import BaseCase
 
 class GachaCase(BaseCase):
-    pass
     """
     注释，可以写这个用例检查了哪些点
     """
     def run(self):
-        # pass
+        pass
         self.add_depends('Gacha')
         Gacha = self._Gacha
 
