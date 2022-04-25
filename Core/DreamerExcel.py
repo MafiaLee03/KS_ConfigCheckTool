@@ -2,7 +2,7 @@
 #coding=utf-8
 """
 libiqi 20220111
-由于ProQ配表格式和表头与topjoy不同做了些修改,且由于openpyxl版本更新不再使用之前的LoadWorkbookWithoutStyles
+《代号Q》配表格式
 """
 import time
 import json
