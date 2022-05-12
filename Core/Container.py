@@ -4,6 +4,7 @@ import os
 import importlib
 import os
 from Core.Util import *
+from Core.Logger import logError
 
 class Container:
     """
@@ -50,7 +51,12 @@ class Container:
                 except Exception as e:
                     break
                 instance = module.__dict__[clss](clss, category)
-                instance.run()
+                try:
+                    instance.run()
+                except Exception as e:
+                    clz._fail_msg.append('\n{}用例运行错误:{}\n'.format(case,e))
+                    clz._fail_msg.append('———————————————————\n')
+                    logError('{}用例运行错误:{}'.format(case,e))
                 if instance.is_success():
                     success_case = success_case + 1
                 else:
